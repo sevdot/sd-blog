@@ -1,23 +1,31 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>联系｜sd-blog 博客应用</title>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-<section class="hero is-link">
-    <div class="hero-body has-text-centered">
-        <h1 class="title">联系</h1>
-        <p class="subtitle">联系我</p>
-        <a href="https://github.com/sevdot" class="button">
-            <span class="icon">
-                <i class="fa fa-github"></i>
-            </span>
-            <span>Github</span>
-        </a>
-    </div>
-</section>
-</body>
-</html>
+@extends('layouts.app')
+@section('title')
+    联系
+@stop
+@section('content')
+    <section class="section">
+        <div class="columns">
+            <div class="column is-offset-4 is-4">
+                <div class="box">
+                    <div class="message is-success">
+                        <div class="message-body has-text-centered">
+                            <i class="fa fa-warning"></i> 添加微信请道明来意，谢谢！
+                        </div>
+                    </div>
+                    <div class="is-flex is-justify-content-center">
+                        <figure class="image is-300x300">
+                            <img src="{{asset('/images/wechat.jpeg')}}" alt="">
+                        </figure>
+                    </div>
+                </div>
+                <div class="box">
+                    <h2 class="title is-4">公众号</h2>
+                    <hr>
+                    <figure class="image">
+                        <img src="{{asset('images/sevdots.png')}}" alt="">
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+@stop
