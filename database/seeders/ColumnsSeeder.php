@@ -6,7 +6,7 @@ use App\Models\Column;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class ColumnSeeder extends Seeder
+class ColumnsSeeder extends Seeder
 {
     /**
      * Run the database seeds.
