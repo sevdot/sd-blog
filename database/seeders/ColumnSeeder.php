@@ -2,18 +2,19 @@
 
 namespace Database\Seeders;
 
+use App\Models\Column;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class DatabaseSeeder extends Seeder
+class ColumnSeeder extends Seeder
 {
     /**
-     * Seed the application's database.
+     * Run the database seeds.
      *
      * @return void
      */
     public function run()
     {
-        $this->call(ColumnSeeder::class);
+        Column::factory()->count(10)->create();
     }
 }
