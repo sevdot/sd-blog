@@ -11,4 +11,8 @@ class ArticlesController extends Controller
         $articles = Article::orderBy('created_at', 'desc')->paginate(10);
         return view('articles.index',compact('articles'));
     }
+
+    public function show(Article $article){
+        return view('articles.show',compact('article'));
+    }
 }
