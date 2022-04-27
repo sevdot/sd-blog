@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
     public function root()
     {
-        return view('pages.root');
+        $articles = Article::orderBy('created_at','desc')->limit(10)->get();
+        return view('pages.root',compact('articles'));
     }
 
     public function about()

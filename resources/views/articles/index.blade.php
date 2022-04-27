@@ -1,11 +1,13 @@
 @extends('layouts.app')
-
+@section('title')
+    博客
+@stop
 @section('content')
     <section class="hero is-link">
         <div class="hero-body">
             <div class="has-text-centered mt-2">
-                <h1 class="title is-4">独立自由</h1>
-                <p class="subtitle is-6">崇尚独立开发，追求自由职业。</p>
+                <h1 class="title is-4">博客文章</h1>
+                <p class="subtitle is-6">我偶尔会写博客文章分享关于独立开发和自由职业的内容，关注微信公众号可及时预览。</p>
                 <a href="" class="button is-outlined is-info">联系</a>
             </div>
         </div>
@@ -15,16 +17,16 @@
             <div class="columns">
                 <main class="column is-9">
                     <div class="box">
-                        <h2 class="title is-5">最新文章</h2>
-                        <hr class="mt-1 mb-3">
                         @foreach($articles as $key=>$value)
                             <div class="box is-flex">
-                                <time class="mr-2">{{$value->created_at->toDateString()}}</time>
                                 <a class="is-flex" href="" title="{{$value->title}}">
+                                    <time>{{$value->created_at->toDateString()}}</time>
+                                    <span style="margin: 0 5px;">|</span>
                                     <span>{{$value->title}}</span>
                                 </a>
                             </div>
                         @endforeach
+                        {!! $articles->render() !!}
                     </div>
                 </main>
                 <aside class="column is-3">
@@ -39,15 +41,10 @@
                         </div>
                         <hr>
                         <div class="has-text-centered">
-                            <a href="" class="button is-light">
-                                <span class="icon"><i class="fa fa-github"></i></span>
-                            </a>
-                            <a href="" class="button is-info">
-                                <span class="icon"><i class="fa fa-weibo"></i></span>
-                            </a>
-                            <a href="" class="button is-success">
-                                <span class="icon"><i class="fa fa-weixin"></i></span>
-                            </a>
+                            <a href="" class="button is-light"><span class="icon"><i
+                                        class="fa fa-github"></i></span></a>
+                            <a href="" class="button is-info"><span class="icon"><i class="fa fa-weibo"></i></span></a>
+                            <a href="" class="button is-success"><span class="icon"><i class="fa fa-weixin"></i></span></a>
                         </div>
                     </div>
                     <div class="box">
