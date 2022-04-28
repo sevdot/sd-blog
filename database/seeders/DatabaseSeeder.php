@@ -16,5 +16,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(ColumnsSeeder::class);
         $this->call(ArticlesSeeder::class);
+        $this->call(ProjectsSeeder::class);
+        $this->call(MilestonesSeeder::class);
     }
 }
