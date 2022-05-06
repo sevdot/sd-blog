@@ -6,7 +6,7 @@
             <div class="has-text-centered mt-2">
                 <h1 class="title is-4">独立自由</h1>
                 <p class="subtitle is-6">崇尚独立开发，追求自由职业。</p>
-                <a href="" class="button is-outlined is-info">联系</a>
+                <a href="{{url('/contact')}}" class="button is-outlined is-info">联系</a>
             </div>
         </div>
     </section>
