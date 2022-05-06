@@ -15,10 +15,10 @@
 
             </div>
             <div class="navbar-end">
-                <a href="" class="navbar-item">首页</a>
-                <a href="" class="navbar-item">项目</a>
-                <a href="" class="navbar-item">博客</a>
-                <a href="" class="navbar-item">关于</a>
+                <a href="{{url('/')}}" class="navbar-item">首页</a>
+                <a href="{{url('projects')}}" class="navbar-item">项目</a>
+                <a href="{{url('blog')}}" class="navbar-item">博客</a>
+                <a href="{{url('about')}}" class="navbar-item">关于</a>
             </div>
         </div>
     </div>
