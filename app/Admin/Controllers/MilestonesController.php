@@ -2,14 +2,14 @@
 
 namespace App\Admin\Controllers;
 
-use App\Models\Article;
-use App\Models\Column;
+use App\Models\Milestone;
+use App\Models\Project;
 use Dcat\Admin\Form;
 use Dcat\Admin\Grid;
 use Dcat\Admin\Show;
 use Dcat\Admin\Http\Controllers\AdminController;
 
-class ArticlesController extends AdminController
+class MilestonesController extends AdminController
 {
     /**
      * Make a grid builder.
@@ -18,15 +18,15 @@ class ArticlesController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(Article::with(['column']), function (Grid $grid) {
+        return Grid::make(Milestone::with(['project']), function (Grid $grid) {
             $grid->column('id')->sortable();
-            $grid->column('column.name', '专栏');
             $grid->column('title');
-            $grid->column('updated_at')->sortable();
+            $grid->column('project.name','项目');
+            $grid->column('created_at')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-                $filter->like('name');
+                $filter->like('title');
 
             });
         });
@@ -41,12 +41,11 @@ class ArticlesController extends AdminController
      */
     protected function detail($id)
     {
-        return Show::make($id, new Article(), function (Show $show) {
+        return Show::make($id, new Milestone(), function (Show $show) {
             $show->field('id');
-            $show->field('column_id');
             $show->field('title');
-            $show->field('excerpt');
             $show->field('content');
+            $show->field('project_id');
             $show->field('created_at');
             $show->field('updated_at');
         });
@@ -59,13 +58,13 @@ class ArticlesController extends AdminController
      */
     protected function form()
     {
-        $columns = Column::pluck('name', 'id')->toArray();
-
-        return Form::make(new Article(), function (Form $form) use ($columns) {
+        $projects = Project::pluck('name','id');
+        return Form::make(new Milestone(), function (Form $form) use($projects) {
             $form->display('id');
-            $form->select('column_id')->options($columns);
+            $form->select('project_id')->options($projects);
             $form->text('title');
-            $form->markdown('content');
+            $form->text('content');
+
             $form->display('created_at');
             $form->display('updated_at');
         });

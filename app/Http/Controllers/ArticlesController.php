@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Parsedown;
 
 class ArticlesController extends Controller
 {
@@ -12,7 +13,8 @@ class ArticlesController extends Controller
         return view('articles.index',compact('articles'));
     }
 
-    public function show(Article $article){
+    public function show(Article $article,Parsedown $parsedown){
+        $article->content = $parsedown->parse($article->content);
         return view('articles.show',compact('article'));
     }
 }
