@@ -14,6 +14,14 @@ class ArticlesController extends Controller
     }
 
     public function show(Article $article,Parsedown $parsedown){
+        return view('articles.show',compact('article'));
+    }
+
+    public function getDetailBySlug($slug,Parsedown $parsedown){
+        $article = Article::where('slug',$slug)->first();
+        if (!$article){
+            return redirect()->route('root');
+        }
         $article->content = $parsedown->parse($article->content);
         return view('articles.show',compact('article'));
     }

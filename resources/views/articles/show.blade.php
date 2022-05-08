@@ -17,7 +17,7 @@
                         </div>
                         <hr class="mt-2 mb-4">
                         <div class="content">
-                            {!! $article->content !!}
+                            {!! $article->parse_content !!}
                         </div>
                     </div>
                 </div>

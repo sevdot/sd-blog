@@ -65,6 +65,7 @@ class ArticlesController extends AdminController
             $form->display('id');
             $form->select('column_id')->options($columns);
             $form->text('title');
+            $form->text('slug','翻译标题');
             $form->markdown('content');
             $form->display('created_at');
             $form->display('updated_at');
