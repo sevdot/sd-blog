@@ -53,6 +53,7 @@ class ImportArticleForm extends Form
                 'column_id'=>$column->id,
                 'title'=>$meta['title'],
                 'content'=>$articleContent,
+                'slug'=>Str::beforeLast($file->getFilename(),'.md'),
                 'created_at'=>$datetime,
                 'updated_at'=>$datetime,
             ]);
