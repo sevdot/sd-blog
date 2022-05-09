@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b7ecffe614d02af941402d6433fb3331",
+    "content-hash": "8a87be3bfc4c605acae8bf85b00aae04",
     "packages": [
         {
             "name": "brick/math",
@@ -2641,6 +2641,85 @@
                 "source": "https://github.com/nikic/PHP-Parser/tree/v4.13.2"
             },
             "time": "2021-11-30T19:35:32+00:00"
+        },
+        {
+            "name": "overtrue/pinyin",
+            "version": "4.0.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/pinyin.git",
+                "reference": "04bdb4d33d50e8fb1aa5a824064c5151c4b15dc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/pinyin/zipball/04bdb4d33d50e8fb1aa5a824064c5151c4b15dc2",
+                "reference": "04bdb4d33d50e8fb1aa5a824064c5151c4b15dc2",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=7.1"
+            },
+            "require-dev": {
+                "brainmaestro/composer-git-hooks": "^2.7",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpunit/phpunit": "~8.0"
+            },
+            "type": "library",
+            "extra": {
+                "hooks": {
+                    "pre-commit": [
+                        "composer test",
+                        "composer fix-style"
+                    ],
+                    "pre-push": [
+                        "composer test",
+                        "composer check-style"
+                    ]
+                }
+            },
+            "autoload": {
+                "files": [
+                    "src/const.php"
+                ],
+                "psr-4": {
+                    "Overtrue\\Pinyin\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "anzhengchao@gmail.com",
+                    "homepage": "http://github.com/overtrue"
+                }
+            ],
+            "description": "Chinese to pinyin translator.",
+            "homepage": "https://github.com/overtrue/pinyin",
+            "keywords": [
+                "Chinese",
+                "Pinyin",
+                "cn2pinyin"
+            ],
+            "support": {
+                "issues": "https://github.com/overtrue/pinyin/issues",
+                "source": "https://github.com/overtrue/pinyin/tree/4.0.8"
+            },
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/overtrue",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-07-19T03:43:32+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -5891,6 +5970,86 @@
                 }
             ],
             "time": "2022-03-02T12:58:14+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v6.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "e77f3ea0b21141d771d4a5655faa54f692b34af5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/e77f3ea0b21141d771d4a5655faa54f692b34af5",
+                "reference": "e77f3ea0b21141d771d4a5655faa54f692b34af5",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "php": ">=8.0.2",
+                "symfony/polyfill-ctype": "^1.8"
+            },
+            "conflict": {
+                "symfony/console": "<5.4"
+            },
+            "require-dev": {
+                "symfony/console": "^5.4|^6.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "bin": [
+                "Resources/bin/yaml-lint"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Loads and dumps YAML files",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v6.0.3"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-01-26T17:23:29+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",

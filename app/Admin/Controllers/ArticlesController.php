@@ -2,6 +2,7 @@
 
 namespace App\Admin\Controllers;
 
+use App\Admin\Actions\Grid\ImportArticleAction;
 use App\Models\Article;
 use App\Models\Column;
 use Dcat\Admin\Form;
@@ -27,7 +28,9 @@ class ArticlesController extends AdminController
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
                 $filter->like('name');
-
+            });
+            $grid->tools(function ($tools) {
+                $tools->append(new ImportArticleAction());
             });
         });
     }

@@ -12,7 +12,7 @@ class Article extends Model
 {
     use HasFactory;
     use HasDateTimeFormatter;
-
+    protected $guarded=[];
     public function column()
     {
         return $this->belongsTo(Column::class);

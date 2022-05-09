@@ -11,7 +11,9 @@
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.2",
         "laravel/sanctum": "^2.14.1",
-        "laravel/tinker": "^2.7"
+        "laravel/tinker": "^2.7",
+        "overtrue/pinyin": "^4.0",
+        "symfony/yaml": "^6.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
