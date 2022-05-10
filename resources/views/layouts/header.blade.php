@@ -1,7 +1,7 @@
 <nav id="navbar" class="navbar is-link has-shadow">
     <div class="container is-max-widescreen">
         <div class="navbar-brand">
-            <a class="navbar-item" href="">
+            <a class="navbar-item" href="{{url('/')}}">
                 <span class="logo title is-3 has-text-white">SevDot</span>
             </a>
             <div id="navbarBurger" class="navbar-burger burger" data-target="navMenu">
