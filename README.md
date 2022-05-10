@@ -31,13 +31,8 @@ cd sd-blog
 ```bash
 sudo cp .env.example .env
 ```
-修改 `.env` 文件，关闭 debug 和设置项目域名：
-```bash
-APP_DEBUG=false
-APP_URL=http://www.sevdot.com
-```
 
-创建`blog`数据库，修改 `.env` 文件里的数据库连接：
+修改 `.env` 文件里的数据库连接：
 ```bash
 DB_HOST=localhost
 DB_DATABASE=blog
