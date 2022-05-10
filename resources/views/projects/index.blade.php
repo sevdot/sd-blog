@@ -32,9 +32,10 @@
                                 <p class="is-size-6 has-text-grey">{{$value->description}}</p>
                             </div>
                         </div>
+
                     </div>
                     @endforeach
-                    <div class="box">{{$projects->render()}}</div>
+                    {{$projects->render()}}
                 </div>
                 <div class="column is-3">
                     @include('components/aside')
