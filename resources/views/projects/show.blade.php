@@ -37,7 +37,7 @@
                                     <div class="timeline-marker is-link"></div>
                                     <div class="timeline-content">
                                         <p class="heading">{{$value->created_at->toDateString()}}</p>
-                                        <div>{!! $value->content !!}</div>
+                                        <div>{!! $value->parse_content !!}</div>
                                     </div>
                                 </div>
                                 @endforeach
