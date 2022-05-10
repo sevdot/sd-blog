@@ -18,14 +18,17 @@
 @include('layouts.header')
 @yield('content')
 @include('layouts.footer')
-<script>
-    var _hmt = _hmt || [];
-    (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?7501e58a01f15a8172e984786a0684fc";
-        var s = document.getElementsByTagName("script")[0];
-        s.parentNode.insertBefore(hm, s);
-    })();
-</script>
+@if(config('services.baidu_analytics'))
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            if (window.location.hostname !== 'www.blog.com') return;
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?{{config('services.baidu_analytics')}}";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+@endif
 </body>
 </html>

@@ -36,4 +36,6 @@ return [
         'key'   => env('BAIDU_TRANSLATE_KEY'),
     ],
 
+    'baidu_analytics'=>env('BAIDU_ANALYTICS')
 ];
+
