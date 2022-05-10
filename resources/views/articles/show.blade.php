@@ -2,9 +2,9 @@
 @section('title')
     {{$article->title}}
 @stop
-@section('meta')
-    <meta name="description" content="{{$article->excerpt}}" />
-@endsection
+@section('description')
+    {{$article->excerpt}}
+@stop
 @section('content')
     <section class="section">
         <div class="container is-max-widescreen">
