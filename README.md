@@ -24,8 +24,7 @@ cd sd-blog
 ```
 安装扩展包依赖：
 ```bash
-cd sd-blog
-
+composer install
 ```
 生成配置文件：
 ```bash
