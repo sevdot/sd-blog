@@ -9,7 +9,7 @@ class PagesController extends Controller
 {
     public function root()
     {
-        $articles = Article::orderBy('created_at','desc')->limit(10)->get();
+        $articles = Article::with(['column'])->orderBy('created_at','desc')->limit(10)->get();
         return view('pages.root',compact('articles'));
     }
 

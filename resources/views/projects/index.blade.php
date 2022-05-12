@@ -7,7 +7,7 @@
         <div class="hero-body">
             <div class="has-text-centered mt-2">
                 <h1 class="title is-4">业余项目</h1>
-                <p class="subtitle is-6">业余时间通过构建项目来提升自己</p>
+                <p class="subtitle is-6">业余时间通过开发项目来提升自己</p>
                 <a href="{{url('/contact')}}" class="button is-outlined is-info">联系</a>
             </div>
         </div>
