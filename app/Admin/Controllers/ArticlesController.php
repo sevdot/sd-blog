@@ -27,7 +27,7 @@ class ArticlesController extends AdminController
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-                $filter->like('name');
+                $filter->like('title');
             });
             $grid->tools(function ($tools) {
                 $tools->append(new ImportArticleAction());
