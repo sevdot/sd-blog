@@ -15,3 +15,4 @@ Route::get('/blog/{article}/{slug?}', [ArticlesController::class, 'show'])->name
 
 Route::resource('projects', ProjectsController::class);
 
+Route::feeds();

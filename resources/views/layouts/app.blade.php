@@ -12,6 +12,7 @@
     <meta name="keywords" content="SevDot，独立开发，自由职业"/>
     <meta name="description" content="@yield('description','崇尚独立开发，追求自由职业，记录在独立自由上的探索。')"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @include('feed::links')
 </head>
 
 <body>

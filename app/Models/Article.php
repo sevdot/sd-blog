@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Dcat\Admin\Traits\HasDateTimeFormatter;
 use Parsedown;
+use Spatie\Feed\Feedable;
+use Spatie\Feed\FeedItem;
 
-class Article extends Model
+
+class Article extends Model implements Feedable
 {
     use HasFactory;
     use HasDateTimeFormatter;
@@ -30,4 +33,22 @@ class Article extends Model
             get: fn () => $parsedown->parse($this->content),
         );
     }
+
+    public function toFeedItem(): FeedItem
+    {
+        return FeedItem::create()
+            ->id($this->id)
+            ->title($this->title)
+            ->summary($this->excerpt)
+            ->updated($this->updated_at)
+            ->link($this->link())
+            ->authorName('SevDot')
+            ->authorEmail('sevdot8@gmail.com');
+    }
+
+    public static function getFeedItems()
+    {
+        return Article::all();
+    }
+
 }
