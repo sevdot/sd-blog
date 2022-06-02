@@ -48,7 +48,7 @@ class Article extends Model implements Feedable
 
     public static function getFeedItems()
     {
-        return Article::all();
+        return Article::query()->orderBy('created_at','desc')->get();
     }
 
 }
