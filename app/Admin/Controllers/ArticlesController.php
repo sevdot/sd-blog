@@ -22,8 +22,9 @@ class ArticlesController extends AdminController
         return Grid::make(Article::with(['column']), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('column.name', '专栏');
-            $grid->column('title');
+            $grid->column('title')->substr(0,50);
             $grid->column('updated_at')->sortable();
+            $grid->column('published_at','发布日期')->sortable();
 
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
@@ -52,6 +53,7 @@ class ArticlesController extends AdminController
             $show->field('content');
             $show->field('created_at');
             $show->field('updated_at');
+            $show->field('published_at','发布日期');
         });
     }
 
@@ -70,6 +72,7 @@ class ArticlesController extends AdminController
             $form->text('title');
             $form->text('slug','翻译标题');
             $form->markdown('content');
+            $form->datetime('published_at','发布日期');
             $form->display('created_at');
             $form->display('updated_at');
         });

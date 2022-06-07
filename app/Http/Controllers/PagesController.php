@@ -11,7 +11,10 @@ class PagesController extends Controller
 {
     public function root()
     {
-        $articles = Article::with(['column'])->orderBy('created_at', 'desc')->limit(10)->get();
+        $articles = Article::with(['column'])->whereNotNull('published_at')
+            ->orderBy('published_at', 'desc')
+            ->limit(10)
+            ->get();
         return view('pages.root', compact('articles'));
     }
 
@@ -28,7 +31,7 @@ class PagesController extends Controller
     public function sitemap()
     {
 
-        $map = Cache::remember('site-map',120,function (){
+        $map = Cache::remember('site-map', 120, function () {
             $path = public_path('sitemap.xml');
             SitemapGenerator::create(config('app.url'))->writeToFile($path);
             return $path;
