@@ -13,12 +13,15 @@
     <meta name="description" content="@yield('description','崇尚独立开发，追求自由职业，记录在独立自由上的探索。')"/>
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @include('feed::links')
+    @yield('css')
 </head>
 
 <body>
 @include('layouts.header')
 @yield('content')
 @include('layouts.footer')
+
+@yield('script')
 @if(config('services.baidu_analytics'))
     <script>
         var _hmt = _hmt || [];

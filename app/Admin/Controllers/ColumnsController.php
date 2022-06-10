@@ -20,12 +20,10 @@ class ColumnsController extends AdminController
         return Grid::make(new Column(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('name');
-            $grid->column('created_at');
-            $grid->column('updated_at')->sortable();
-        
+
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
-        
+
             });
         });
     }
@@ -42,8 +40,6 @@ class ColumnsController extends AdminController
         return Show::make($id, new Column(), function (Show $show) {
             $show->field('id');
             $show->field('name');
-            $show->field('created_at');
-            $show->field('updated_at');
         });
     }
 
@@ -57,7 +53,7 @@ class ColumnsController extends AdminController
         return Form::make(new Column(), function (Form $form) {
             $form->display('id');
             $form->text('name');
-        
+
             $form->display('created_at');
             $form->display('updated_at');
         });

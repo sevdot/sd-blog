@@ -16,6 +16,9 @@ class Article extends Model implements Feedable
     use HasFactory;
     use HasDateTimeFormatter;
     protected $guarded=[];
+    protected $casts=[
+        'published_at'=>'datetime'
+    ];
     public function column()
     {
         return $this->belongsTo(Column::class);
@@ -48,7 +51,10 @@ class Article extends Model implements Feedable
 
     public static function getFeedItems()
     {
-        return Article::query()->orderBy('created_at','desc')->get();
+        return Article::query()
+            ->whereNotNull('published_at')
+            ->orderBy('published_at','desc')
+            ->get();
     }
 
 }

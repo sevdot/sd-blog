@@ -11,10 +11,12 @@ class PagesController extends Controller
 {
     public function root()
     {
-        $articles = Article::with(['column'])->whereNotNull('published_at')
+        $articles = Article::with(['column'])
+            ->whereNotNull('published_at')
             ->orderBy('published_at', 'desc')
             ->limit(10)
             ->get();
+
         return view('pages.root', compact('articles'));
     }
 

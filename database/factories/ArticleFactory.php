@@ -21,7 +21,8 @@ class ArticleFactory extends Factory
             'title' => $sentence,
             'content' => $this->faker->text(),
             'excerpt' => $sentence,
-            'column_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+            'column_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
+            'published_at' => $this->faker->dateTime(),
         ];
     }
 }
