@@ -25,7 +25,7 @@
 @if(config('services.baidu_analytics'))
     <script>
         var _hmt = _hmt || [];
-        (function () {
+        (function() {
             var hm = document.createElement("script");
             hm.src = "https://hm.baidu.com/hm.js?{{config('services.baidu_analytics')}}";
             var s = document.getElementsByTagName("script")[0];
