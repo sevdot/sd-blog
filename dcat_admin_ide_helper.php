@@ -39,6 +39,11 @@ namespace Dcat\Admin {
      * @property Grid\Column|Collection column_id
      * @property Grid\Column|Collection excerpt
      * @property Grid\Column|Collection content
+     * @property Grid\Column|Collection published_at
+     * @property Grid\Column|Collection logo
+     * @property Grid\Column|Collection url
+     * @property Grid\Column|Collection describe
+     * @property Grid\Column|Collection status
      * @property Grid\Column|Collection project_id
      * @property Grid\Column|Collection tokenable_type
      * @property Grid\Column|Collection tokenable_id
@@ -75,6 +80,11 @@ namespace Dcat\Admin {
      * @method Grid\Column|Collection column_id(string $label = null)
      * @method Grid\Column|Collection excerpt(string $label = null)
      * @method Grid\Column|Collection content(string $label = null)
+     * @method Grid\Column|Collection published_at(string $label = null)
+     * @method Grid\Column|Collection logo(string $label = null)
+     * @method Grid\Column|Collection url(string $label = null)
+     * @method Grid\Column|Collection describe(string $label = null)
+     * @method Grid\Column|Collection status(string $label = null)
      * @method Grid\Column|Collection project_id(string $label = null)
      * @method Grid\Column|Collection tokenable_type(string $label = null)
      * @method Grid\Column|Collection tokenable_id(string $label = null)
@@ -116,6 +126,11 @@ namespace Dcat\Admin {
      * @property Show\Field|Collection column_id
      * @property Show\Field|Collection excerpt
      * @property Show\Field|Collection content
+     * @property Show\Field|Collection published_at
+     * @property Show\Field|Collection logo
+     * @property Show\Field|Collection url
+     * @property Show\Field|Collection describe
+     * @property Show\Field|Collection status
      * @property Show\Field|Collection project_id
      * @property Show\Field|Collection tokenable_type
      * @property Show\Field|Collection tokenable_id
@@ -152,6 +167,11 @@ namespace Dcat\Admin {
      * @method Show\Field|Collection column_id(string $label = null)
      * @method Show\Field|Collection excerpt(string $label = null)
      * @method Show\Field|Collection content(string $label = null)
+     * @method Show\Field|Collection published_at(string $label = null)
+     * @method Show\Field|Collection logo(string $label = null)
+     * @method Show\Field|Collection url(string $label = null)
+     * @method Show\Field|Collection describe(string $label = null)
+     * @method Show\Field|Collection status(string $label = null)
      * @method Show\Field|Collection project_id(string $label = null)
      * @method Show\Field|Collection tokenable_type(string $label = null)
      * @method Show\Field|Collection tokenable_id(string $label = null)

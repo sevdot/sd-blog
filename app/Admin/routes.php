@@ -17,5 +17,6 @@ Route::group([
     $router->resource('articles', 'ArticlesController');
     $router->resource('projects', 'ProjectsController');
     $router->resource('milestones', 'MilestonesController');
+    $router->resource('links', 'LinksController');
 
 });
