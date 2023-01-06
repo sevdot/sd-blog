@@ -26,7 +26,7 @@
                     <div class="box is-flex is-flex-wrap-wrap is-justify-content-space-between mb-2">
                         <div class="columns is-flex-wrap-wrap">
                             @foreach($links as $link)
-                                <a href="{{$link->url}}" class="column is-3" target="_blank">
+                                <a href="{{$link->url}}" class="is-flex column is-3" target="_blank">
                                     <div class="box mb-2 is-flex is-flex-direction-column is-justify-content-center is-align-items-center">
                                         <figure class="image is-96x96 mb-1">
                                             <img class="is-rounded" style="" src="{{$link->logo}}"
