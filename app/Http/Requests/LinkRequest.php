@@ -25,9 +25,9 @@ class LinkRequest extends FormRequest
     {
         return [
             'name' => 'required|max:200',
-            'logo' => 'required|max:200',
-            'url' => 'required|max:200',
-            'describe' => 'required|max:200',
+            'logo' => 'required|max:200|url',
+            'url' => 'required|max:200|url',
+            'describe' => 'max:200',
         ];
     }
 
@@ -35,11 +35,13 @@ class LinkRequest extends FormRequest
     {
         return [
             'name.required' => '名称必填',
-            'name.min' => '名称不能超过 200 字符',
+            'name.max' => '名称不能超过 200 字符',
             'logo.required' => '图标必填',
-            'logo.min' => '图标不能超过 200 字符',
+            'logo.max' => '图标不能超过 200 字符',
+            'logo.url' => '请输入正确的图标地址',
             'url.required' => '网址必填',
-            'url.min' => '网址不能超过 200 字符',
+            'url.max' => '网址不能超过 200 字符',
+            'url.url' => '请输入正确的网址',
             'describe.required' => '描述必填',
             'describe.max' => '描述不能超过 200 字符',
         ];

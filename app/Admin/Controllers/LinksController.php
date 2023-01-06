@@ -32,6 +32,7 @@ class LinksController extends AdminController
                     return "<span class=''>待审核</span>";
                 }
             });
+            $grid->column('created_at','申请时间')->sortDesc();
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
                 $filter->in('status', '状态')->checkbox([

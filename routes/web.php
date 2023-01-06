@@ -15,6 +15,7 @@ Route::get('/blog', [ArticlesController::class, 'index'])->name('articles.index'
 Route::get('/blog/{article}/{slug?}', [ArticlesController::class, 'show'])->name('articles.show');
 
 Route::get('links', [LinksController::class, 'index'])->name('links.index');
+Route::get('links/create', [LinksController::class, 'create'])->name('links.create');
 Route::post('links', [LinksController::class, 'store'])->name('links.store');
 
 Route::resource('projects', ProjectsController::class);
