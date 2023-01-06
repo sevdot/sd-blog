@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('logo')->comment('logo');
             $table->string('url')->comment('链接地址');
             $table->string('describe')->comment('描述');
-            $table->unsignedTinyInteger('status',3)->default(0)->comment('状态（0：待审核，1：审核通，2：审核失败）');
+            $table->unsignedTinyInteger('status')->default(0)->comment('状态（0：待审核，1：审核通，2：审核失败）');
             $table->timestamps();
         });
     }
